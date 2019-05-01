@@ -31,7 +31,7 @@ function draw() {
   // background(BACKGROUND);
   image(img, 0, height/3, img.width/2, img.height/2);
   if (i==3){
-    background(250);
+    background(150);
     image(img, 0, height/3, img.width/2, img.height/2);
     i = 0;
   }
