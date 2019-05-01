@@ -7,7 +7,7 @@ var brt;
 var BACKGROUND;
 var HEIGHT = 500;
 var WIDTH = 500;
-var CANVAS_WIDTH = 1500;
+var CANVAS_HEIGHT = 1500;
 var i = 0;
 function setup() {
   frameRate(0.5);
@@ -24,32 +24,37 @@ function setup() {
   BACKGROUND = color(220);
   img = loadImage('originalfigure.png');
   background(BACKGROUND);
-  createCanvas(CANVAS_WIDTH,HEIGHT);
+  createCanvas(WIDTH,CANVAS_HEIGHT);
 }
 
 function draw() {
   // background(BACKGROUND);
-  image(img, width/2, 0, img.width/1.5, img.height/1.5);
+  image(img, 0, height/3, img.width/2, img.height/2);
   if (i==3){
     background(250);
-    image(img, width/2, 0, img.width/1.5, img.height/1.5);
+    image(img, 0, height/3, img.width/2, img.height/2);
     i = 0;
   }
   textAlign(LEFT);
   fill(0);
   legSetUp(20, 0, 10, 10, flt[i%3]);
   textAlign(LEFT);
+  fill(0);
   text("FORWARD LEFT TETRAPOD",5,15);
   legSetUp(20, 370, 10, 10, frt[i%3]);
   textAlign(RIGHT);
+  fill(0);
   text("FORWARD RIGHT TETRAPOD",WIDTH - 5,15);
   legSetUp(20, 0, 270, 10, blt[i%3]);
   textAlign(LEFT);
+  fill(0);
   text("BACKWARD LEFT TETRAPOD",5,270);
   legSetUp(20, 370, 270, 10, brt[i%3]);
   textAlign(RIGHT);
+  fill(0);
   text("BACKWARD RIGHT TETRAPOD",WIDTH - 5,270);
-  text("Inspired by Figure 4 from \"GAIT TRANSITIONS IN A PHASE OSCILLATOR MODEL OF AN INSECT CENTRAL PATTERN GENERATOR\" \n By: Zahra Aminzare, Vaibhav Srivastava, and Philip Holmes",width-10, height-20);
+  fill(0);
+  text("Inspired by Figure 4 from \"GAIT TRANSITIONS IN A PHASE OSCILLATOR MODEL\nOF AN INSECT CENTRAL PATTERN GENERATOR\" \n By: Zahra Aminzare, Vaibhav Srivastava, and Philip Holmes",width-10, height-height/2.5);
   
   i+=1;
 
