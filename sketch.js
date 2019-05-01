@@ -18,7 +18,7 @@ function setup() {
   L3 = color(255);
   flt = [[L1,R2],[L3,R1], [L2,R3]];
   frt = [[L3,R2],[L2,R1],[L1,R3]];
-  brt = [[L3,R2], [L1,R3],[L2,R1]];
+  brt = [[L3,R2],[L1,R3],[L2,R1]];
   blt = [[L1,R2],[L2,R3],[L3,R1]];
   img = loadImage('originalfigure.png');
   BACKGROUND = color(220);
