@@ -29,10 +29,10 @@ function setup() {
 
 function draw() {
   // background(BACKGROUND);
-  image(img, width/2.5, 0, img.width/1.3, img.height/1.3);
+  image(img, width/2, 0, img.width/1.5, img.height/1.5);
   if (i==3){
     background(250);
-    image(img, width/2.5, 0, img.width/1.3, img.height/1.3);
+    image(img, width/2, 0, img.width/1.5, img.height/1.5);
     i = 0;
   }
   textAlign(LEFT);
@@ -49,6 +49,7 @@ function draw() {
   legSetUp(20, 370, 270, 10, brt[i%3]);
   textAlign(RIGHT);
   text("BACKWARD RIGHT TETRAPOD",WIDTH - 5,270);
+  text("Inspired by Figure 4 from \"GAIT TRANSITIONS IN A PHASE OSCILLATOR MODEL OF AN INSECT CENTRAL PATTERN GENERATOR\" \n By: Zahra Aminzare, Vaibhav Srivastava, and Philip Holmes",width-10, height-20);
   
   i+=1;
 
