@@ -29,33 +29,24 @@ function setup() {
 
 function draw() {
   // background(BACKGROUND);
+  fill(0);
   image(img, 0, height/3, img.width/2, img.height/2);
   if (i==3 || i == 0){
     background(255);
+    textAlign(LEFT);
+    text("FORWARD LEFT TETRAPOD",5,15);
+    text("BACKWARD LEFT TETRAPOD",5,270);
+    textAlign(RIGHT);
+    text("FORWARD RIGHT TETRAPOD",WIDTH - 5,15);
+    text("BACKWARD RIGHT TETRAPOD",WIDTH - 5,270);
+    text("Inspired by Figure 4 from \"GAIT TRANSITIONS IN A PHASE OSCILLATOR MODEL\nOF AN INSECT CENTRAL PATTERN GENERATOR\" \n By: Zahra Aminzare, Vaibhav Srivastava, and Philip Holmes",width-10, height-height/2.5);
     image(img, 0, height/3, img.width/2, img.height/2);
     i = 0;
   }
-  textAlign(LEFT);
-  fill(0);
   legSetUp(20, 0, 10, 10, flt[i%3]);
-  textAlign(LEFT);
-  fill(0);
-  text("FORWARD LEFT TETRAPOD",5,15);
   legSetUp(20, 370, 10, 10, frt[i%3]);
-  textAlign(RIGHT);
-  fill(0);
-  text("FORWARD RIGHT TETRAPOD",WIDTH - 5,15);
   legSetUp(20, 0, 270, 10, blt[i%3]);
-  textAlign(LEFT);
-  fill(0);
-  text("BACKWARD LEFT TETRAPOD",5,270);
   legSetUp(20, 370, 270, 10, brt[i%3]);
-  textAlign(RIGHT);
-  fill(0);
-  text("BACKWARD RIGHT TETRAPOD",WIDTH - 5,270);
-  fill(0);
-  text("Inspired by Figure 4 from \"GAIT TRANSITIONS IN A PHASE OSCILLATOR MODEL\nOF AN INSECT CENTRAL PATTERN GENERATOR\" \n By: Zahra Aminzare, Vaibhav Srivastava, and Philip Holmes",width-10, height-height/2.5);
-  
   i+=1;
 
 }
