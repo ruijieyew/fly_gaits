@@ -7,6 +7,7 @@ var brt;
 var BACKGROUND;
 var HEIGHT = 500;
 var WIDTH = 500;
+var CANVAS_WIDTH = 1500;
 var i = 0;
 function setup() {
   frameRate(0.5);
@@ -21,14 +22,17 @@ function setup() {
   brt = [[L3,R2],[L1,R3],[L2,R1]];
   blt = [[L1,R2],[L2,R3],[L3,R1]];
   BACKGROUND = color(220);
+  img = loadImage('originalfigure.png');
   background(BACKGROUND);
-  createCanvas(HEIGHT, WIDTH);
+  createCanvas(CANVAS_WIDTH,HEIGHT);
 }
 
 function draw() {
   // background(BACKGROUND);
+  image(img, width/2.5, 0, img.width/1.3, img.height/1.3);
   if (i==3){
     background(250);
+    image(img, width/2.5, 0, img.width/1.3, img.height/1.3);
     i = 0;
   }
   textAlign(LEFT);
