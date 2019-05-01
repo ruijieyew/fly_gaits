@@ -6,7 +6,7 @@ var blt;
 var brt;
 var BACKGROUND;
 var HEIGHT = 500;
-var WIDTH = 500;
+var WIDTH = 1000;
 var i = 0;
 function setup() {
   frameRate(0.5);
@@ -20,6 +20,7 @@ function setup() {
   frt = [[L3,R2],[L2,R1],[L1,R3]];
   brt = [[L3,R2], [L1,R3],[L2,R1]];
   blt = [[L1,R2],[L2,R3],[L3,R1]];
+  img = loadImage('originalfigure.png');
   BACKGROUND = color(220);
   background(BACKGROUND);
   createCanvas(HEIGHT, WIDTH);
@@ -45,6 +46,7 @@ function draw() {
   legSetUp(20, 370, 270, 10, brt[i%3]);
   textAlign(RIGHT);
   text("BACKWARD RIGHT TETRAPOD",WIDTH - 5,270);
+  image(img, 0, HEIGHT/ 2, img.width / 2, img.height / 2);
   
   i+=1;
 
