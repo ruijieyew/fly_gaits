@@ -30,8 +30,8 @@ function setup() {
 function draw() {
   // background(BACKGROUND);
   image(img, 0, height/3, img.width/2, img.height/2);
-   if (i==3 || i == 0){{
-    background(150);
+  if (i==3 || i == 0){
+    background(255);
     image(img, 0, height/3, img.width/2, img.height/2);
     i = 0;
   }
